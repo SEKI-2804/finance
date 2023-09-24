@@ -556,7 +556,7 @@ _:-ms-lang(x),
 }
 
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1037px) {
     #nav {
         position: fixed;
         z-index: -1;
