@@ -1,0 +1,1136 @@
+@charset "UTF-8";
+
+
+html {
+    overflow: auto;
+}
+
+body {
+    overflow: hidden;
+    background-color: #1E1E1E;
+    color: white;
+    font-family: 'Shippori Mincho', serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
+
+span {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h2 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin-bottom: 80px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 110px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-wrapper {
+    object-fit: cover;
+}
+.logo-wrapper img {
+    width: 250px;
+    height: auto;
+}
+
+header img {
+    width: 70%;
+    height: auto;
+    margin: 20px auto auto 40px;
+}
+
+.header-nav-item a {
+    position: relative;
+}
+
+.header-nav-item a:after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    right: 0%;
+    /*線の形状*/
+    width: 120%;
+    height: 2px;
+    background: #ffffff;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+}
+
+.header-nav-item a:hover::after {
+    transform: scale(1, 1);
+    /*X方向にスケール拡大*/
+}
+
+#nav {
+    margin-top: 20px;
+}
+
+#nav li,
+#footer-nav li,
+footer p {
+    letter-spacing: 3px;
+}
+
+.flex li {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    margin: 20px 40px auto auto;
+    line-height: 20px;
+}
+
+section {
+    margin-bottom: 300px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.main-visual {
+    text-align: right;
+    margin-bottom: 250px;
+    object-fit: cover;
+}
+
+.main-visual img {
+    width: 80%;
+    height: auto;
+}
+
+/* ======== 概要・挨拶 ======== */
+.row {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.row img {
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+
+.left-side {
+    width: 42%;
+}
+
+.right-side {
+    width: 50%;
+    text-align: right;
+    object-fit: cover;
+}
+
+
+/* ボタン */
+.btn {
+    border: solid 3px white;
+    padding: 20px 170px;
+    position: relative;
+}
+
+.btn:hover {
+    border: solid 3px rgb(123, 123, 123);
+}
+
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: -7px;
+    height: 2px;
+    background-color: white;
+}
+
+.btn::before {
+    width: 60px;
+    transform: translate(-30px, 0px);
+}
+
+.btn::after {
+    width: 15px;
+    transform-origin: right center;
+    transform: translate(-30px, 0px) rotate(25deg);
+}
+
+
+.title {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 70px;
+}
+
+.sub-title {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+/* ======== 新着情報 ======== */
+/* ニュースティッカー */
+.news-list {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+
+.news-list li {
+    text-align: left;
+}
+
+.news-list .item a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 50px 20px;
+}
+
+.news-list .item:first-child a {
+    border-top: 1px solid white;
+}
+
+.news-list .item .date {
+    margin: 0;
+    min-width: 140px;
+    font-size: 16px;
+    color: white;
+    padding: 0 20px 0 0;
+}
+
+.news-list .item .category {
+    margin: 0;
+    min-width: 140px;
+    padding: 0 100px 0 0;
+}
+
+.news-list .item .category span {
+    background: #999;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.news-list .item .news-title {
+    margin: 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.news-list .item a:hover .news-title {
+    opacity: 0.7;
+}
+
+.item p {
+    line-height: 30px;
+}
+
+.centering {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#news {
+    margin: 0px 200px 300px;
+}
+
+/* ======== サービス内容 ======== */
+/* 縦書き */
+#service {
+    margin: 0px 240px 300px;
+}
+
+.service {
+    padding: 0;
+    list-style-type: disc;
+    display: flex;
+    overflow-x: auto;
+    margin: 0px 10px 90px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service li {
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -o-writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl
+}
+
+/* 縦書きボタン */
+.vertical-btn {
+    font-size: 23px;
+    width: 30px;
+    height: 400px;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 50px 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: white;
+    border-radius: 5px;
+}
+
+.service-btn {
+    background-color: #528869;
+}
+
+.service-btn:hover {
+    background-color: #335642;
+}
+
+.block {
+    clear: both;
+}
+
+
+/* ======== 特徴 ======== */
+.feature-flex {
+    display: flex;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.feature-flex-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.point {
+    color: #B19A33;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.headline {
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 28px;
+    margin-bottom: 35px;
+}
+
+/* ======== お問い合わせ情報 ======== */
+#contact p {
+    margin-bottom: 10px;
+}
+
+.free-text {
+    color: #B19A33;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.flex img {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.phone-num {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-right: 30px;
+}
+
+.time {
+    font-size: 17px;
+    margin-right: 30px;
+    letter-spacing: 2px;
+}
+
+.contact-btn {
+    background-color: #528869;
+    padding: 20px 140px;
+    position: relative;
+
+    background-image: url(img/mail.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 80px;
+}
+
+.contact-btn:hover {
+    background-color: #335642;
+}
+
+.contact-btn::before,
+.contact-btn::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: -7px;
+    height: 2px;
+    background-color: white;
+}
+
+.contact-btn::before {
+    width: 60px;
+    transform: translate(-40px, 0px);
+}
+
+.contact-btn::after {
+    width: 15px;
+    transform-origin: right center;
+    transform: translate(-40px, 0px) rotate(25deg);
+}
+
+
+/* ======== フッター ======== */
+footer {
+    background-color: #528869;
+    margin: 0 -200%;
+    padding: 0 200%;
+    bottom: 0;
+}
+
+footer p {
+    display: inline-block;
+    margin-bottom: auto;
+    font-size: medium;
+    text-align: left;
+}
+.footer-flex {
+    display: flex;
+}
+
+.google-maps iframe {
+    width: 100%;
+}
+
+#footer-nav {
+    display: inline-block;
+    margin-top: 50px;
+}
+
+#footer-nav li {
+    margin: 0px 70px;
+}
+
+.footer-text {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*========= ページトップのためのCSS ===============*/
+
+.scroll-top {
+    /*表示位置*/
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 2;
+    /*縦書き*/
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /*改行禁止*/
+    white-space: nowrap;
+    /*矢印の動き*/
+    animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*リンク全体の aタグの形状*/
+.scroll-top a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/*スクロールリンクの形状*/
+.js-scroll a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100px;
+    background: #ffffff;
+}
+
+.js-scroll a::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: -6px;
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+    transform: skewX(-31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-scroll a::before {
+    right: -11px;
+}
+
+/*ページトップリンクの形状*/
+
+.js-pagetop a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100px;
+    background: #ffffff;
+}
+
+.js-pagetop a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 2px;
+    height: 20px;
+    background: #ffffff;
+    transform: skewX(31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-pagetop a::before {
+    right: 0;
+}
+
+
+@media screen and (max-width: 1037px) {
+    #nav {
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        /*はじめは透過0*/
+        /*ナビの位置と形状*/
+        top: 0;
+        width: 100%;
+        height: auto;
+        /*ナビの高さ*/
+        background: #1E1E1E;
+        /*動き*/
+        transition: all 0.3s;
+    }
+
+    #nav.panelactive {
+        opacity: 1;
+        z-index: 999;
+    }
+
+    #nav.panelactive {
+        /*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        /*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #nav ul {
+        display: none;
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #nav.panelactive ul {
+        display: block;
+    }
+
+    #nav li {
+        list-style: none;
+        text-align: center;
+    }
+
+    #nav li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn {
+        position: sticky;
+        z-index: 9999;
+        /*ボタンを最前面に*/
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    /*×に変化*/
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff;
+        width: 45%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    .openbtn.active-btn span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active-btn span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active-btn span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 22px;
+        letter-spacing: 7px;
+        margin-bottom: 80px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 110px;
+    }
+
+    .header-nav-item a:after {
+        content: '';
+        /*絶対配置で線の位置を決める*/
+        position: absolute;
+        bottom: -3px;
+        left: 0%;
+        right: 0%;
+        /*線の形状*/
+        width: 100%;
+        height: 2px;
+        background: #ffffff;
+        /*アニメーションの指定*/
+        transition: all .3s;
+        transform: scale(0, 1);
+        /*X方向0、Y方向1*/
+        transform-origin: center top;
+        /*上部中央基点*/
+    }
+
+    .header-nav-item a:hover::after {
+        transform: scale(1, 1);
+        /*X方向にスケール拡大*/
+    }
+
+    header img {
+        width: 50%;
+        height: auto;
+        margin: 20px auto auto 20px;
+    }
+
+    .logo-wrapper img {
+        width: 150px;
+        height: auto;
+    }
+
+    .main-visual {
+        margin-bottom: 250px;
+        object-fit: cover;
+    }
+
+    .main-visual img {
+        width: 100%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 30px;
+        letter-spacing: 20px;
+        text-align: center;
+        line-height: 40px;
+        margin-bottom: 70px;
+    }
+
+
+    /* ======== 概要・挨拶 ======== */
+    .row {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .left-side {
+        width: auto;
+        text-align: center;
+    }
+    .left-side p, .left-side h2 {
+        text-align: left;
+    }
+    
+    .ph-center {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .right-side {
+        width: 80%;
+        text-align: center;
+        object-fit: cover;
+    }
+
+
+    /* ======== 新着情報 ======== */
+    #news {
+        margin: 0px 10px 300px;
+    }
+
+    /* ニュースティッカー */
+    .news-list {
+        list-style: none outside;
+        margin: 0;
+        padding: 0;
+    }
+
+    .news-list li {
+        text-align: left;
+    }
+
+    .news-list .item a {
+        display: flex;
+        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 30px 20px;
+    }
+
+    .news-list .item:first-child a {
+        border-top: 1px solid white;
+    }
+
+    .news-list .item .date {
+        margin: 0;
+        min-width: 100px;
+        font-size: 12px;
+        color: white;
+        padding: 0 0 0 0;
+    }
+
+    .news-list .item .category {
+        margin: 0;
+        min-width: 140px;
+        padding: 0 0 0 0;
+    }
+
+    .news-list .item .category span {
+        background: #999;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        padding: 5px 20px;
+        font-size: 12px;
+        line-height: 1;
+    }
+
+    .news-list .item .news-title {
+        margin: 0;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .news-list .item a:hover .news-title {
+        opacity: 0.7;
+    }
+
+    .item p {
+        line-height: 30px;
+    }
+
+
+    /* ボタン */
+    .btn {
+        border: solid 2px white;
+        padding: 15px 100px;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .btn:hover {
+        border: solid 2px rgb(123, 123, 123);
+    }
+
+    .btn::before,
+    .btn::after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        right: -7px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .btn::before {
+        width: 50px;
+        transform: translate(-30px, 0px);
+    }
+
+    .btn::after {
+        width: 15px;
+        transform-origin: right center;
+        transform: translate(-30px, 0px) rotate(25deg);
+    }
+
+
+    /* ======== サービス ======== */
+    #service {
+        margin: 0px 0px 300px;
+    }
+
+    /* 縦書きボタン */
+    .vertical-btn {
+        font-size: 15px;
+        width: 10px;
+        height: 250px;
+        line-height: 1.5;
+        position: relative;
+        display: inline-block;
+        padding: 50px 30px;
+        padding-left: 40px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        color: white;
+        border-radius: 5px;
+    }
+
+
+    /* ======== 特徴 ======== */
+    /* .feature-flex {
+        display: flex;
+        flex-flow: column;
+        text-align: left;
+        margin-bottom: -4px;
+    }
+    
+    .sp_br {
+        display: none;
+    }
+
+
+    /* ======== お問い合わせ情報 ======== */
+    #contact p {
+        margin-bottom: 10px;
+    }
+
+    .free-text {
+        color: #B19A33;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+
+    .flex img {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+
+    .phone-num {
+        font-size: 35px;
+        letter-spacing: 5px;
+        margin-right: 30px;
+    }
+
+    .time {
+        font-size: 14px;
+        margin-right: 30px;
+        letter-spacing: 2px;
+    }
+
+    .contact-btn {
+        background-color: #528869;
+        padding: 20px 100px;
+        position: relative;
+
+        background-image: url(img/mail.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 80px;
+    }
+
+    .contact-btn::before,
+    .contact-btn::after {
+        content: "";
+        position: absolute;
+        top: 55%;
+        right: -7px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .contact-btn::before {
+        width: 50px;
+        transform: translate(-40px, 0px);
+    }
+
+    .contact-btn::after {
+        width: 15px;
+        transform-origin: right center;
+        transform: translate(-40px, 0px) rotate(25deg);
+    }
+
+    #contact a {
+        font-size: 13px;
+    }
+
+
+    /* ======== フッター ======== */
+    footer {
+        background-color: #528869;
+        margin: 0 -200%;
+        padding: 0 200%;
+        bottom: 0;
+    }
+
+    footer p {
+        display: inline-block;
+        margin-bottom: auto;
+        font-size: medium;
+        text-align: left;
+    }
+
+    .google-maps iframe {
+        width: 100%;
+    }
+
+    #footer-nav {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .footer-flex {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 20px;
+
+    }
+
+    .footer-flex li {
+        margin: 0px 12px;
+        letter-spacing: 0px;
+        display: inline-block
+    }
+
+    #footer-nav li {
+        margin: 0px 12px;
+        letter-spacing: 0px;
+    } 
+    #footer-nav li a {
+        font-size: 12px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #footer p {
+        font-size: 13px;
+    }
+
+    #footer span {
+        font-size: 10px;
+    }
+
+    /*========= ページトップのためのCSS ===============*/
+
+    .scroll-top {
+        /*表示位置*/
+        position: fixed;
+        right: 10px;
+        bottom: 30px;
+        z-index: 2;
+        /*縦書き*/
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        /*改行禁止*/
+        white-space: nowrap;
+        /*矢印の動き*/
+        animation: arrowmove 1s ease-in-out infinite;
+    }
+
+    /*リンク全体の aタグの形状*/
+    .scroll-top a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        display: block;
+    }
+
+    /*スクロールリンクの形状*/
+    .js-scroll a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -4px;
+        width: 2px;
+        height: 80px;
+        background: #ffffff;
+    }
+
+    .js-scroll a::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        width: 2px;
+        height: 17px;
+        background: #ffffff;
+        transform: skewX(-31deg);
+    }
+
+    /*Edge IE11 hack*/
+    _:-ms-lang(x),
+    .js-scroll a::before {
+        right: -11px;
+    }
+
+    /*ページトップリンクの形状*/
+
+    .js-pagetop a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -4px;
+        width: 2px;
+        height: 80px;
+        background: #ffffff;
+    }
+
+    .js-pagetop a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 2px;
+        height: 17px;
+        background: #ffffff;
+        transform: skewX(31deg);
+    }
+
+    /*Edge IE11 hack*/
+    _:-ms-lang(x),
+    .js-pagetop a::before {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .feature-flex {
+        display: flex;
+        flex-flow: column;
+        text-align: left;
+        margin-bottom: -4px;
+    }
+
+    .sp_br {
+        display: none;
+    }
+}
