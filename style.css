@@ -718,7 +718,7 @@ _:-ms-lang(x),
     }
 
     .main-visual {
-        margin-bottom: 250px;
+        margin-bottom: 150px;
         object-fit: cover;
     }
 
@@ -765,7 +765,7 @@ _:-ms-lang(x),
 
     /* ======== 新着情報 ======== */
     #news {
-        margin: 0px 10px 300px;
+        margin: -60px 10px 200px;
     }
 
     /* ニュースティッカー */
@@ -868,14 +868,14 @@ _:-ms-lang(x),
 
     /* ======== サービス ======== */
     #service {
-        margin: 0px 0px 300px;
+        margin: 0px 0px 200px;
     }
 
     /* 縦書きボタン */
     .vertical-btn {
         font-size: 15px;
         width: 6px;
-        height: 220px;
+        height: 230px;
         line-height: 1.5;
         position: relative;
         display: inline-block;
@@ -911,6 +911,9 @@ _:-ms-lang(x),
 
 
     /* ======== お問い合わせ情報 ======== */
+    #contact {
+        margin-top: -100px;
+    }
     #contact p {
         margin-bottom: 10px;
     }
@@ -919,6 +922,7 @@ _:-ms-lang(x),
         color: #B19A33;
         font-size: 20px;
         letter-spacing: 5px;
+        margin-top: -40px;
     }
 
     .flex img {
@@ -1024,7 +1028,7 @@ _:-ms-lang(x),
     }
 
     .footer-text {
-        font-size: 10px;
+        font-size: 8px;
         text-align: center;
         margin-bottom: 15px;
     }
