@@ -714,7 +714,7 @@ _:-ms-lang(x),
     }
 
     .logo-wrapper img {
-        width: 150px;
+        width: 120px;
         height: auto;
     }
 
@@ -768,6 +768,9 @@ _:-ms-lang(x),
     #news {
         margin: -60px 10px 200px;
     }
+    #news ul {
+        margin-right: -35px;
+    }
 
     /* ニュースティッカー */
     .news-list {
@@ -787,7 +790,7 @@ _:-ms-lang(x),
         text-decoration: none;
         color: white;
         border-bottom: 1px solid white;
-        padding: 30px 40px;
+        padding: 30px auto;
     }
 
     .news-list .item:first-child a {
