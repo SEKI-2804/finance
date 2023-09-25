@@ -627,6 +627,7 @@ _:-ms-lang(x),
         cursor: pointer;
         width: 50px;
         height: 50px;
+        margin-top: 10px;
     }
 
     /*×に変化*/
@@ -786,7 +787,7 @@ _:-ms-lang(x),
         text-decoration: none;
         color: white;
         border-bottom: 1px solid white;
-        padding: 30px 20px;
+        padding: 30px 40px;
     }
 
     .news-list .item:first-child a {
@@ -815,6 +816,9 @@ _:-ms-lang(x),
         padding: 5px 20px;
         font-size: 12px;
         line-height: 1;
+    }
+    .category {
+        display: none;
     }
 
     .news-list .item .news-title {
@@ -874,12 +878,12 @@ _:-ms-lang(x),
     /* 縦書きボタン */
     .vertical-btn {
         font-size: 13px;
-        width: 5px;
+        width: 4px;
         height: 220px;
         line-height: 1.5;
         position: relative;
         display: inline-block;
-        padding: 50px 30px;
+        padding: 50px 25px;
         padding-left: 40px;
         cursor: pointer;
         -webkit-user-select: none;
