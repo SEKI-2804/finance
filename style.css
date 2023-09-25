@@ -873,9 +873,9 @@ _:-ms-lang(x),
 
     /* 縦書きボタン */
     .vertical-btn {
-        font-size: 15px;
-        width: 6px;
-        height: 230px;
+        font-size: 13px;
+        width: 5px;
+        height: 220px;
         line-height: 1.5;
         position: relative;
         display: inline-block;
