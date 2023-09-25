@@ -875,6 +875,10 @@ _:-ms-lang(x),
         margin: 0px 0px 200px;
     }
 
+    .service {
+        margin-right: -17px;
+    }
+
     /* 縦書きボタン */
     .vertical-btn {
         font-size: 13px;
